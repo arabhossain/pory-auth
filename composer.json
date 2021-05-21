@@ -1,0 +1,29 @@
+{
+    "name": "arabhossain/pory-auth",
+    "description": "Pory authentication module",
+    "authors": [
+        {
+            "name": "Arab Hossain",
+            "email": "green.arab1995@gmail.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pory\\Auth\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pory\\Auth\\ServiceProviders\\PoryAuthServiceProvider",
+                "Pory\\Auth\\ServiceProviders\\PoryAuthRouteProvider"
+            ],
+            "aliases": {
+                "PoryAuth": "Pory\\Auth\\Facades\\PoryAuth"
+            }
+        }
+    }
+}
